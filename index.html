@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja De Vida de / CV</title>
+    <!-- Hoja de estilos propia-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Iconos de fontawesome.com-->
+    <script src="https://kit.fontawesome.com/fb219c69e3.js" crossorigin="anonymous"></script>
+    <!-- Importo la biblioteca jquery de google para trabajar con https://randomuser.me/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Fuentes "ROBOTO" y "OPEN SANS" de https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="imagenes/icono de pagina.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://github.com/pipertstar/Proyecto-Final-Primeros-pasos-del-desarrollo-frontend.git">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proyecto CV">
+    <meta property="og:description" content="Curriculum vitae para proyecto final de TICMAS">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="andres-happy.github.io">
+    <meta property="twitter:url" content="https://github.com/pipertstar/Proyecto-Final-Primeros-pasos-del-desarrollo-frontend.git">
+    <meta name="twitter:title" content="Proyecto CV">
+    <meta name="twitter:description" content="Curriculum vitae para proyecto final de TICMAS">
+    <meta name="twitter:image" content="">
+
+    
+</head>
+
+<body>
+    <div id="pagina">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#titInfoPersonal">Sobre Mi...</a></li>
+                    <li><a href="#titExpLab">Mi experiencia Laboral</a></li>
+                    <li><a href="#titExpLab">Estudios</a></li>
+                    <li><a href="#titCompetencias">Habilidades</a></li>
+                    <li><a href="#titCursos">Cursos y especializaciones</a></li>
+                    <li><a href="#titContactar">Contacto</a></li>
+                </ul>
+
+                <!--Modo oscuro-->
+                <i title="Modo claro activo" id="modoVis" class="fa-solid fa-sun"></i>
+            </nav>
+
+            <section id="encabezado" class="encabezado">
+                <article id="perfil">
+                    <figure id="foto">
+                        <img src="" alt="Foto de perfil" id="fotoPerfil" />
+                    </figure>
+                </article>
+
+                <article id="redes">
+                    <figure title="Perfil de Github" class="redesContacto">
+                        <a href="https://github.com/" target="_blank">
+                            <img id="img-github" src="imagenes/github/github-mark.svg" class="imgRedes"
+                                alt="Gitgub logo">
+                        </a>
+                    </figure>
+                    <figure title="Perfil de LinkedIn" class="redesContacto">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img id="img-lin" src="imagenes/linked in/In-Blue-128.png" class="imgRedes"
+                                alt="LinkedIn logo">
+                        </a>
+                    </figure>
+                </article>
+                <article id="nombreTitulo">
+                    <h1 class="nombreTitulo" id="apellidoPersona"></h1>
+                    <h1 class="nombreTitulo" id="nombrePersona"></h1>
+                    <h2 class="nombreTitulo" id="profesionPersona">Estudiante</h2>
+                </article>
+            </section>
+        </header>
+
+        <main id="cuerpo">
+            <section id="info" class="tematica">
+                <article id="titInfoPersonal" class="titulo">
+                    <i class="fa-solid fa-address-card iconoTitulo"></i>
+                    <h3>Sobre mi:</h3>
+                    <div class="fleVisibilidad" id="mostrarInfo">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarInfo">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <p><span class="resaltar">Nacionalidad:</span> <span id="identificacionPersona"></span></p>
+                    <p><span class="resaltar">Fecha de nacimiento:</span> <span id="nacimientoPersona"></span></p>
+                    <p><span class="resaltar">Domicilio</span> <span id="residenciaPersona"></span></p>
+                    <p><span class="resaltar">Calle:</span> <span id="callePersona"></span></p>
+                    <p><span class="resaltar">Código postal:</span> <span id="codPostPersona"></p>
+                    <p><span class="resaltar">Zona horaria:</span> <span id="zonaHorariaPersona"></span></p>
+                    <p><span class="resaltar">Mail:</span> <span id="correoElectPersona"></span></p>
+                    <p><span class="resaltar">Móvil:</span> <span id="telMovilPersona"></span></p>
+                    <p><span class="resaltar">Teléfono particular:</span> <span id="telFijoPersona"></span></p>
+                </article>
+            </section>
+
+            <section id="expLab" class="tematica">
+                <article id="titExpLab" class="titulo">
+                    <i class="fa-solid fa-briefcase iconoTitulo"></i>
+                    <h3>Mi experiencia</h3>
+                    <div class="fleVisibilidad" id="mostrarExpLab">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarExpLab">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <ul class="datos">
+                        <li>
+                            <p><span class="resaltar">2019 - actualidad:</span> Me desempeño como front end free lance</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">2015 - 20219:</span> Soporte tecnico nivel 2</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="estudios" class="tematica">
+                <article id="titEstudios" class="titulo">
+                    <i class="fa-solid fa-graduation-cap iconoTitulo"></i>
+                    <h3>ESTUDIOS ACADÉMICOS</h3>
+                    <div class="fleVisibilidad" id="mostrarEstudios">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarEstudios">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <ul>
+                        <li>
+                            <p><span class="resaltar">Full Stack en Python:</span> en curso</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">Secundario:</span> completo</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">Primario:</span> completo</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="competencias" class="tematica">
+                <article id="titCompetencias" class="titulo">
+                    <i class="fa-solid fa-laptop-code iconoTitulo"></i>
+                    <h3>Habilidades</h3>
+                    <div class="fleVisibilidad" id="mostrarComp">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarComp">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article class="datos">
+                    <p>HTML: <progress class="barraProgreso" max="100" value="90"></progress></p>
+                    <p>CSS: <progress class="barraProgreso" max="100" value="50"></progress></p>
+                    <p>Python: <progress class="barraProgreso" max="100" value="75"></progress></p>
+                    <p>PS: <progress class="barraProgreso" max="100" value="85"></progress></p>
+                </article>
+            </section>
+
+            <section id="cursos" class="tematica">
+                <article id="titCursos" class="titulo">
+                    <i class="fa-solid fa-chalkboard-user iconoTitulo"></i>
+                    <h3>Capacitaciones</h3>
+                    <div class="fleVisibilidad" id="mostrarCursos">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarCursos">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <ul class="datos">
+                        <li>
+                            <p><span class="resaltar">sep-2019 - nov-2023:</span> Etapa se programar - ArgentinaPrograma</p>
+                        </li>
+                        <li>
+                            <p><span class="resaltar">abril-2018:</span> Admnistracion - Google ads</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="contactar" class="tematica">
+                <article  id="titContactar" class="titulo">
+                    <i class="fa-solid fa-envelope iconoTitulo"></i>
+                    <h3>Podes contactarme</h3>
+                    <div class="fleVisibilidad" id="mostrarContactar">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="fleVisibilidad" id="ocultarContactar">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                </article>
+                <article>
+                    <form id="formularioContactar">
+                        <label for="nombreCont">Nombre:</label>
+                        <input type="text" name="nombreCont" id="nombreCont" class="cajaFormulario" required placeholder="INGRESE SU NOMBRE"><br>
+
+                        <label for="apellidoCont">Empresa:</label>
+                        <input type="text" name="apellidoCont" id="apellidoCont" class="cajaFormulario" required placeholder="INGRESE SU EMPRESA"><br>
+
+                        <label for="correoElecCont">Correo electrónico</label>
+                        <input type="email" name="correoElecCont" id="correoElecCont" class="cajaFormulario" required placeholder="correo@ejemplo.com"><br>
+
+                        <label for="asuntoCont">Asunto:</label>
+                        <input type="text" name="asuntoCont" id="asuntoCont" class="cajaFormulario" required placeholder="ASUNTO"><br>
+
+                        <textarea name="comentariosCont" id="comentariosCont" class="cajaFormulario" cols="50" rows="8" placeholder="Comentarios adicionales..."></textarea><br>
+                        <input type="submit" id="enviarFormulario" class="cajaFormulario" name="Enviar" value="Enviar">
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <i id="btnToTop" title='Ir al inicio' class="fa-solid fa-arrow-up flecha"></i>
+
+        <footer>
+            TP Integral Ticmas "Primeros pasos del desarrollo frondend" de academia Ticmas 2023 el marco de
+            ARGENTINA PROGRAMA 4.0.
+            <p>Consulte el <a href="https://github.com/pipertstar/Proyecto-Final-Primeros-pasos-del-desarrollo-frontend.git"  target="_blank"> repositorio</a> para acceder a los archivos.</p>
+        </footer>
+    </div>
+    <!-- Inicio del javascript propio, se pone al final para darle tiempo a que la página termine de cargar-->
+    <script src="js/funcionalidad.js"></script>
+
+</body>
+
+</html>
